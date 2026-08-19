@@ -1,0 +1,26 @@
+#!/bin/bash
+# Writes a phone-readable STATUS.txt (iCloud-synced) every 60s until 19/19 done.
+OUT="/Users/ibrahimhaliltopkaya/GVHD_splicing_project/salmon_output/GSE119943"
+LOG="/Users/ibrahimhaliltopkaya/Desktop/Karimi/Klrk1_NKG2D_isoform_analysis/results/logs/08_run.log"
+ST="/Users/ibrahimhaliltopkaya/Desktop/Karimi/Klrk1_NKG2D_isoform_analysis/results/STATUS.txt"
+for i in $(seq 1 240); do
+  done=$(find "$OUT" -name quant.sf 2>/dev/null | wc -l | tr -d ' ')
+  cur=$(grep -E "^=== " "$LOG" 2>/dev/null | tail -1 | sed 's/===//g' | xargs)
+  free=$(df -g "$HOME" | awk 'NR==2{print $4}')
+  {
+    echo "GSE119943 quantification — son guncelleme: $(date '+%H:%M:%S')"
+    echo "Tamamlanan: ${done}/19   |   Bos disk: ${free} GB"
+    echo "Su an: ${cur:-(bekleniyor)}"
+    echo ""
+    echo "Klrk1-203 TPM (tamamlananlar):"
+    for d in "$OUT"/*/; do
+      [ -f "$d/quant.sf" ] || continue
+      s=$(basename "$d")
+      tpm=$(grep ENSMUST00000137660 "$d/quant.sf" | awk '{printf "%.2f", $4}')
+      mr=$(grep -o "Mapping rate = [0-9.]*%" "$d/logs/salmon_quant.log" 2>/dev/null | tail -1)
+      printf "  %-26s 203=%-7s %s\n" "$s" "$tpm" "$mr"
+    done
+  } > "$ST"
+  [ "$done" -ge 19 ] && { echo "TUM 19 ORNEK BITTI." >> "$ST"; break; }
+  sleep 60
+done
