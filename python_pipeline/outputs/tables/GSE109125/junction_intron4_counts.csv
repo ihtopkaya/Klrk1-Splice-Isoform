@@ -1,0 +1,4 @@
+sample,dataset,read_len_bp,E4E5_junction_spanning_reads,intron4_boundary_retention_reads,PIR_junction_based_pct,RI203_region_meancov,exon4_meancov,coverage_retention_ratio_pct,Salmon_203_fraction_pct
+ImmGen_CD8_Effector,GSE109125,25,0,31.0,NA(no junction reads at this read len),27.1,159.1,17.0,20.89
+ImmGen_CD8_Tcm,GSE109125,25,0,55.0,NA(no junction reads at this read len),35.0,196.5,17.8,16.31
+ImmGen_CD8_Naive,GSE109125,25,0,0.0,NA(no junction reads at this read len),0.2,1.2,21.3,0.0

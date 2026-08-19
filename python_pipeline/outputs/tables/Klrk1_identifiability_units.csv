@@ -1,0 +1,7 @@
+isoform,exclusive_exon_bp,exclusive_junctions,self_exclusive_feature,report_unit,basis
+Klrk1-201,0,NONE,no,Klrk1-201,"no self-exclusive feature, but separable by its canonical first exon (129599545-735) -> individual"
+Klrk1-202,0,NONE,no,Klrk1-205/202,NO self-exclusive exon base or junction; base-subset of 205; no read separates 202 from 205 -> merged into Klrk1-205/202
+Klrk1-203,0,NONE,no,Klrk1-203,"no self-exclusive feature, but {203,204} retention (129593531-631) exceeds 204 + 203-type intron-3 splice junction absent from 204 -> individual"
+Klrk1-204,784,NONE,yes,Klrk1-204,"exclusive intron-3 retention (129593737-129594445, 709bp) -> individual"
+Klrk1-205,2113,129593314-129593631,yes,Klrk1-205/202,exclusive 3' tail (2113bp) + exclusive exon5 acceptor junction -> individual
+Klrk1-206,2865,NONE,yes,Klrk1-206,exclusive giant retained-intron exon (2865bp) -> individual
