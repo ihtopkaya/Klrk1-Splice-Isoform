@@ -1,0 +1,7 @@
+Diagnostic region,Transcript(s),Region type,chr6 coords,mean depth: WT_Post7 (GSE203167),mean depth: Tem_1 (GSE147371)
+Canonical first exon,201/203/206,shared,129599545-129599735,19.9,24.6
+Alternative first exon,202/205/206,shared,129600774-129600804,12.9,6.4
+205-exclusive 3' tail,205,EXCLUSIVE,129587286-129589376,26.3,28.6
+206-exclusive exon,206,EXCLUSIVE,129599736-129600773,0.1,1.2
+Intron-3 retention,204,EXCLUSIVE,129593737-129594445,1.5,10.1
+Intron-4 retention segment,203/204,shared,129593531-129593631,5.6,19.7
